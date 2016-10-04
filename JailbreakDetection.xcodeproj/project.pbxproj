@@ -12,7 +12,6 @@
 		28283A0C1C6F924B0041BAD7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28283A0B1C6F924B0041BAD7 /* ViewController.m */; };
 		28283A111C6F924B0041BAD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28283A101C6F924B0041BAD7 /* Assets.xcassets */; };
 		28283A1D1C6F92670041BAD7 /* JBDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = 28283A1C1C6F92670041BAD7 /* JBDetect.m */; };
-		28283A1F1C6FA18D0041BAD7 /* itsec.png in Resources */ = {isa = PBXBuildFile; fileRef = 28283A1E1C6FA18D0041BAD7 /* itsec.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +25,6 @@
 		28283A151C6F924B0041BAD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28283A1B1C6F92670041BAD7 /* JBDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBDetect.h; sourceTree = "<group>"; };
 		28283A1C1C6F92670041BAD7 /* JBDetect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBDetect.m; sourceTree = "<group>"; };
-		28283A1E1C6FA18D0041BAD7 /* itsec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itsec.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +73,6 @@
 		28283A041C6F924B0041BAD7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				28283A1E1C6FA18D0041BAD7 /* itsec.png */,
 				28283A051C6F924B0041BAD7 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -139,7 +136,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28283A1F1C6FA18D0041BAD7 /* itsec.png in Resources */,
 				28283A111C6F924B0041BAD7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

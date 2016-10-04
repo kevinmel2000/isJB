@@ -26,8 +26,8 @@
     vc.view.backgroundColor = [UIColor whiteColor];
     
     UIImageView *img = [[UIImageView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    img.contentMode = UIViewContentModeCenter;
-    img.image = [UIImage imageNamed:@"itsec"];
+    img.contentMode = UIViewContentModeScaleAspectFit;
+    img.image = [UIImage imageNamed:@"Hi"];
     img.backgroundColor = [UIColor whiteColor];
     img.center = vc.view.center;
     
