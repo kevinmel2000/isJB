@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "JBDetect.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    UIViewController *vc = [[UIViewController alloc] init];
+    ViewController *vc = [[ViewController alloc] init];
+    vc.view.frame = self.window.frame;
     vc.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     vc.view.backgroundColor = [UIColor whiteColor];
     
@@ -30,8 +32,22 @@
     img.image = [UIImage imageNamed:@"Hi"];
     img.backgroundColor = [UIColor whiteColor];
     img.center = vc.view.center;
-    
     [vc.view addSubview:img];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.backgroundColor = [UIColor greenColor];
+    button.frame = CGRectMake(0, 0, 260, 44);
+    button.layer.cornerRadius = 5.0;
+    button.layer.borderWidth = 3;
+    button.layer.borderColor = [UIColor greenColor].CGColor;
+    button.clipsToBounds = YES;
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont boldSystemFontOfSize:22];
+    button.center = self.window.center;
+    [button addTarget:vc action:@selector(checkSSLPinning:) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"Chcek SSL Pinning" forState:UIControlStateNormal];
+    [vc.view addSubview:button];
+    
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     return YES;
@@ -40,6 +56,7 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    self.window.hidden = YES;
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -52,6 +69,7 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    self.window.hidden = NO;
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     for (UIView *view in window.subviews) {
         if ([view isKindOfClass:[UIAlertView class]]) {
