@@ -45,7 +45,7 @@
     button.titleLabel.font = [UIFont boldSystemFontOfSize:22];
     button.center = self.window.center;
     [button addTarget:vc action:@selector(checkSSLPinning:) forControlEvents:UIControlEventTouchUpInside];
-    [button setTitle:@"Chcek SSL Pinning" forState:UIControlStateNormal];
+    [button setTitle:@"Check SSL Pinning" forState:UIControlStateNormal];
     [vc.view addSubview:button];
     
     self.window.rootViewController = vc;
